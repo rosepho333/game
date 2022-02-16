@@ -14,7 +14,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  shuffledQuestions = questions
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
@@ -56,7 +56,8 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
-  } else {
+  } 
+  else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
   }
@@ -78,23 +79,17 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'how many legs do you find in 8 pairs of legs?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: '32', correct: false },
+      { text: '64', correct: true },
+      { text: '38', correct: false },
+      { text: '68', correct: false }
     ]
   },
+  
   {
-    question: 'Who is the best YouTuber?',
-    answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
-    ]
-  },
-  {
-    question: 'Is web development fun?',
+    question: 'Q2 Is web development fun?',
     answers: [
       { text: 'Kinda', correct: false },
       { text: 'YES!!!', correct: true },
@@ -103,10 +98,24 @@ const questions = [
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'Q3 What is 4 * 2?',
     answers: [
       { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: '8', correct: true },
+      { text: '89', correct: false },
+      { text: '30', correct: false }
     ]
-  }
+  },
+ 
+ 
+ 
+  {
+    question: 'Is web development funRTTTERTERTR?',
+    answers: [
+      { text: 'rose', correct: false },
+      { text: 'mary', correct: true },
+      { text: 'antony', correct: false },
+      { text: 'IDK', correct: false }
+    ]
+  },
 ]
